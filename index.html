@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹페이지 삽입</title>
+    <style>
+        .container {
+            position: relative;
+            width: 360px; /* 모바일 화면 크기에 맞게 조정 */
+            height: 640px; /* 모바일 화면 크기에 맞게 조정 */
+            margin: auto;
+            background-image: url('mobileIdCard020304.jpg'); /* 이미지 경로 */
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* 웹뷰(iframe) 설정 */
+        .webview {
+            position: absolute;
+            top: 450px;  /* QR 코드 영역의 상단 위치 */
+            left: 100px; /* QR 코드 영역의 왼쪽 위치 */
+            width: 150px; /* QR 코드 크기에 맞게 설정 */
+            height: 150px; /* QR 코드 크기에 맞게 설정 */
+            border: none;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- 웹뷰(iframe) 삽입 -->
+    <iframe class="webview" src="https://jjsxx.github.io/QrImage1" title="웹뷰"></iframe>
+</div>
+
+</body>
+</html>
