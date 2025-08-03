@@ -7,18 +7,21 @@
     <style>
         /* 배경 이미지 설정 */
         body {
-            background-image: url('mobileIdCard020304.jpg'); /* 위에서 제공된 배경 이미지 */
+            background-image: url('mobileIdCard020304.jpg'); /* 배경 이미지 경로 */
             background-size: cover; /* 배경 이미지를 화면 크기에 맞게 조정 */
             background-position: center; /* 배경 이미지 중앙 정렬 */
             margin: 0;
             height: 100vh; /* 화면 높이 100% */
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        /* 회색 네모 박스의 크기와 위치 */
+        /* 회색 네모 박스의 크기와 위치 설정 */
         .webview-container {
             position: absolute;
-            top: 230px; /* 원하는 위치에 맞게 설정 (예: 위에서 230px 떨어진 위치) */
-            left: 75px; /* 왼쪽으로 75px 떨어진 위치 */
+            top: 230px; /* 원하는 위치에 맞게 설정 */
+            left: 75px; /* 왼쪽으로 원하는 만큼 이동 */
             width: 200px; /* 회색 박스 너비 */
             height: 200px; /* 회색 박스 높이 */
             background-color: #808080; /* 회색 */
@@ -28,8 +31,8 @@
 
         /* 웹뷰(iframe) 설정 */
         .webview {
-            width: 100%;
-            height: 100%;
+            width: 100%; /* 부모 크기(회색 박스)에 맞게 너비 조정 */
+            height: 100%; /* 부모 크기(회색 박스)에 맞게 높이 조정 */
             border: none; /* 테두리 제거 */
             overflow: hidden; /* 스크롤 숨기기 */
         }
@@ -40,7 +43,7 @@
 <!-- 회색 네모 박스를 설정 -->
 <div class="webview-container">
     <!-- 웹뷰 삽입 -->
-    <iframe class="webview" src="https://jjsxx.github.io/QrImage1" title="웹뷰"></iframe>
+    <iframe class="webview" src="https://jjsxx.github.io/QrImage.com" title="웹뷰"></iframe>
 </div>
 
 </body>
